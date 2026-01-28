@@ -1,5 +1,5 @@
 
-import type { ClawdbotConfig } from "clawdbot/plugin-sdk";
+import type { ClawdbotConfig } from "moltbot/plugin-sdk";
 import type { FeishuConfig, FeishuAccount } from "./types.js";
 
 const DEFAULT_ACCOUNT_ID = "default";

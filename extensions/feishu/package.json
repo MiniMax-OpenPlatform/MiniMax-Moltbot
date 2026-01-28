@@ -2,8 +2,8 @@
     "name": "@moltbot/feishu",
     "version": "2026.1.27",
     "type": "module",
-    "description": "Clawdbot Feishu (Lark) channel plugin",
-    "clawdbot": {
+    "description": "Moltbot Feishu (Lark) channel plugin",
+    "moltbot": {
         "extensions": [
             "./index.ts"
         ],
@@ -28,11 +28,5 @@
     },
     "dependencies": {
         "@larksuiteoapi/node-sdk": "^1.26.0"
-    },
-    "devDependencies": {
-        "clawdbot": "workspace:*"
-    },
-    "peerDependencies": {
-        "clawdbot": ">=2026.1.26"
     }
 }

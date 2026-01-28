@@ -1,4 +1,4 @@
-import type { ClawdbotPluginRuntime } from "clawdbot/plugin-sdk";
+import type { ClawdbotPluginRuntime } from "moltbot/plugin-sdk";
 
 type FeishuRuntime = ClawdbotPluginRuntime;
 

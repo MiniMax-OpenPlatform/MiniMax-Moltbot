@@ -1,5 +1,5 @@
 
-import type { ClawdbotConfig } from "clawdbot/plugin-sdk";
+import type { ClawdbotConfig } from "moltbot/plugin-sdk";
 import {
     formatDocsLink,
     promptAccountId,
@@ -12,7 +12,7 @@ import {
     type ChannelOnboardingStatus,
     type ChannelOnboardingStatusContext,
     type WizardPrompter,
-} from "clawdbot/plugin-sdk";
+} from "moltbot/plugin-sdk";
 import { listFeishuAccountIds, resolveFeishuAccount, isFeishuConfigured } from "./accounts.js";
 
 const channel = "feishu" as const;
