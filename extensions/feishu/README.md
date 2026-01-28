@@ -88,19 +88,6 @@ Add the following to your `moltbot` configuration (e.g., in `moltbot.config.json
 > *   Receive events securely (verify the source).
 > *   Have enabled **Encrypt Key** in the Feishu Event Subscriptions settings.
 
-### Does the bot only respond to @mentions?
-
-**This is determined by your Feishu app permissions, not by this plugin.**
-
-- **Group chats**
-  - If the app only has **"Receive group messages that @mention the bot"** (`im:message.group_at_msg:readonly`), Feishu only pushes messages where someone @mentions the bot, so the bot **only sees and replies to @mentions**.
-  - If the app has permissions to **receive all group messages**, Feishu will push more (or all) group messages, and the bot can reply to messages that do not @mention it.
-- **Direct chats**
-  - Messages sent to the bot in DMs are pushed once the relevant message permissions are granted; **no @mention is required**.
-- **This plugin** does not filter by @mention; it **processes whatever events Feishu sends**. So "only reply to @mentions" vs "reply to all messages" is entirely controlled by which permissions you enable in the Feishu developer console.
-
-To change behavior, update the app’s permissions in **Feishu Open Platform → Your App → Permissions** and publish a new version.
-
 ### Multi-Account Configuration
 
 If you need to configure multiple Feishu bots, you can use the accounts structure:
@@ -171,8 +158,8 @@ If you need to configure multiple Feishu bots, you can use the accounts structur
 | Text | ✅ | Full support |
 | Image | ✅ | PNG, JPEG, GIF, WebP, etc. (max 10MB) |
 | File | ✅ | PDF, DOC, XLS, PPT, etc. (max 30MB) |
-| Audio | ✅ | Opus format |
-| Video | ✅ | MP4 format |
+| Audio | ✅ | mp3, wav, ogg, opus, m4a format (max 30MB) |
+| Video | ✅ | MP4 format (max 30MB) |
 
 ## Current Limitations
 
@@ -186,3 +173,6 @@ If you need to configure multiple Feishu bots, you can use the accounts structur
 *   [Feishu Open Platform Documentation](https://open.feishu.cn/document/home/index)
 *   [Feishu Bot Development Guide](https://open.feishu.cn/document/home/develop-a-bot-in-5-minutes/create-an-app)
 
+## Acknowledgments
+
+This project is based on [tomatoxman/moltbot](https://github.com/tomatoxman/moltbot/tree/feat/feishu-integration) and has been modified and optimized. Thanks to the original author for their contributions!

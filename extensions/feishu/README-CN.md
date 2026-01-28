@@ -172,3 +172,6 @@ pnpm moltbot channels add feishu
 
 *   [飞书开放平台文档](https://open.feishu.cn/document/home/index)
 *   [飞书机器人开发指南](https://open.feishu.cn/document/home/develop-a-bot-in-5-minutes/create-an-app)
+
+## 感谢
+项目基于 [tomatoxman/moltbot](https://github.com/tomatoxman/moltbot/tree/feat/feishu-integration) 的飞书扩展，进行了修改和优化。感谢原作者的贡献！
