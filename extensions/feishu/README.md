@@ -16,7 +16,7 @@ To use this extension, you need to configure it with credentials from the Feishu
 You can interactively configure this extension using the CLI:
 
 ```bash
-pnpm moltbot channels add feishu
+pnpm moltbot channels add
 ```
 
 This wizard will guide you through entering the required credentials.
@@ -51,16 +51,14 @@ This wizard will guide you through entering the required credentials.
 4.  **Add Permissions:**
     *   Navigate to **Permissions & Scopes** (权限管理).
     *   Search and add the following permissions:
-        *   `im:message` - 获取与发送单聊、群组消息（包括下载消息中的资源文件）
-        *   `im:message:send_as_bot` - 以应用的身份发送消息
-        *   `im:chat` 或 `im:chat:readonly` - 获取群组信息
-        *   `im:resource` - 上传图片和文件（发送媒体消息需要）
-        *   `im:message.reaction:write` - 添加消息表情回复（表情回复需要）
-        *   **Group messages** (choose as needed):
-            *   `im:message.group_at_msg:readonly` - **Only receive group messages that @mention the bot** (common; avoids reacting to every group message)
-            *   To receive all group messages, search for "group message" / "receive message" permissions in the Feishu console and add as per current docs
-        *   **P2P**: Direct messages to the bot are typically covered by the above `im:message` permissions
-    *   **Important**: Create and publish a version of your app to apply these permissions.
+        *   `im:message` - Get and send messages (including media attachments)
+        *   `im:message.group_at_msg:readonly` - Only receive group messages that @mention the bot (common; avoids reacting to every group message)
+        *   `im:message:send_as_bot` - Send messages as the app
+        *   `im:chat` or `im:chat:readonly` - Get group information
+        *   `im:resource` - Upload images and files (required for sending media messages)
+        *   `im:message.reaction:write` - Add message emoji reactions (required for emoji reactions)
+
+> **Important**: Create and publish a version of your app to apply these permissions.
 
 5.  **Enable Bot Capability:**
     *   Navigate to **App Capabilities** -> **Bot**.

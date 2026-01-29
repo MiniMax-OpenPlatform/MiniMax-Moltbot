@@ -16,7 +16,7 @@
 您可以使用 CLI 交互式配置此扩展：
 
 ```bash
-pnpm moltbot channels add feishu
+pnpm moltbot channels add
 ```
 
 此向导将引导您输入所需的凭证。
@@ -49,18 +49,14 @@ pnpm moltbot channels add feishu
         *   `im.message.receive_v1`（接收消息）
 
 4.  **添加权限：**
-    *   导航到**权限管理**。
-    *   搜索并添加以下权限：
-        *   `im:message` - 获取与发送单聊、群组消息（包括下载消息中的资源文件）
-        *   `im:message:send_as_bot` - 以应用的身份发送消息
-        *   `im:chat` - 获取群组信息
-        *   `im:resource` - 上传图片和文件（发送媒体消息需要）
-        *   `im:message.reaction:write` - 添加消息表情回复（表情回复需要）
-        *   **群聊消息**（二选一或按需）：
-            *   `im:message.group_at_msg:readonly` - **仅接收群聊中 @ 机器人的消息**（常用，避免群内所有消息都触发机器人）
-            *   若需接收群内所有消息，请在权限管理中搜索「群组消息」「接收消息」等，按飞书当前文档添加对应权限
-        *   **单聊**：单聊中用户发给机器人的消息一般随上述 `im:message` 等权限一并开通
-    *   **重要**：创建并发布应用版本以应用这些权限。
+- 导航到权限管理，搜索并添加以下权限：
+    - `im:message` 获取与发送单聊、群组消息（包括下载消息中的资源文件）
+    - `im:message.group_at_msg:readonly` 接收群聊中@机器人消息事件
+    - `im:message:send_as_bot` 以应用的身份发送消息
+    - `im:chat` 获取群组信息
+    - `im:resource` 上传图片和文件（发送媒体消息需要）
+    - `im:message.reaction:write` 添加消息表情回复（表情回复需要）
+> 重要⚠️：创建并发布应用版本以应用这些权限。
 
 5.  **启用机器人能力：**
     *   导航到**应用能力** -> **机器人**。
@@ -173,5 +169,5 @@ pnpm moltbot channels add feishu
 *   [飞书开放平台文档](https://open.feishu.cn/document/home/index)
 *   [飞书机器人开发指南](https://open.feishu.cn/document/home/develop-a-bot-in-5-minutes/create-an-app)
 
-## 感谢
-项目基于 [tomatoxman/moltbot](https://github.com/tomatoxman/moltbot/tree/feat/feishu-integration) 的飞书扩展，进行了修改和优化。感谢原作者的贡献！
+## 诚挚感谢💗💗💗
+项目基于 [tomatoxman/moltbot](https://github.com/tomatoxman/moltbot/tree/feat/feishu-integration) 的飞书扩展，进行了修改和优化。感谢原作者的开源贡献！💗💗💗
